@@ -22,7 +22,7 @@ Focus on creativity, having fun, and experimentation rather than technical perfe
 
 ### What to Bring
 
-* **Your own AI agent setup** - Cursor, Claude Code, GitHub Copilot, or any agent you prefer (see [TIPS.md](TIPS.md) for options)
+* **Your own AI agent setup** - Cursor, Claude Code, GitHub Copilot, or any agent you prefer (see [TIPS.md](../TIPS.md) for options)
 * **Your own API keys** - We won't be providing keys; use your personal accounts
 * **Personal data** - Download/export data from any service you want to analyze (see ideas below)
 * **Creativity** - The most important thing!
@@ -152,7 +152,7 @@ Here are some ideas for data sources you can use:
    You'll be invited to the workshop workspace during setup!
 
 3. **Set up your AI agent**
-   See [TIPS.md](TIPS.md) for setup instructions. Optionally use [.mcp.json.example](.mcp.json.example) to configure MCP servers.
+   See [TIPS.md](../TIPS.md) for setup instructions. Optionally use [.mcp.json.example](.mcp.json.example) to configure MCP servers.
 
 4. **Check examples**
    Browse [examples/](examples/) for inspiration.
