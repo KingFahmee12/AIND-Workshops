@@ -44,9 +44,8 @@ Tessl is an agent enablement platform that helps you get more out of coding agen
 * **MCP Integration**: Works with most coding agents (Claude Code, Cursor, etc.) via Model Context Protocol
 
 **How it works:**
-1. Install Tessl CLI and run `tessl init` in your project
-2. Search and install tiles for libraries you're using (e.g., `tessl search express`)
-3. Your agent automatically uses these tiles for better, more accurate code
+
+Set up & install the Tessl CLI tool & MCP server by following [the quick start guide](https://docs.tessl.io/introduction-to-tessl/quick-start-guide).
 
 **Learn more:**
 * [What is Tessl?](https://docs.tessl.io/overview/readme)
@@ -137,24 +136,6 @@ Here are some ideas for data sources you can use:
 * **Photos**: Analyze your photo library metadata
   - Most photographed locations, time of day patterns
 
-## What is Tessl?
-
-Tessl is an agent enablement platform that helps you get more out of coding agents by providing them with better context. It offers:
-
-* **Public Registry**: Version-aware usage documentation on 10,000+ open-source libraries
-* **Usage Specs (Tiles)**: Structured documentation that agents can use to understand libraries and APIs correctly
-* **MCP Integration**: Works with most coding agents (Claude Code, Cursor, etc.) via Model Context Protocol
-
-**How it works:**
-1. Install Tessl CLI and run `tessl init` in your project
-2. Search and install tiles for libraries you're using (e.g., `tessl search express`)
-3. Your agent automatically uses these tiles for better, more accurate code
-
-**Learn more:**
-* [What is Tessl?](https://docs.tessl.io/overview/readme)
-* [Quick Start Guide](https://docs.tessl.io/introduction-to-tessl/quick-start-guide)
-* [Better Code with Usage Specs](https://docs.tessl.io/common-workflows/better-code-with-usage-specs)
-
 ## Setup
 
 1. **⚠️ Put your data in the `data/` folder**
@@ -189,11 +170,11 @@ Remember: This is about **vibe coding** and having fun! The goal isn't technical
 
 ## Leveraging Tessl Tiles
 
-The Tessl registry has tiles (usage specs) that can help you build faster and with fewer errors. Here are some you might find useful:
+The Tessl registry has tiles (usage specs) that can help you build faster and with fewer errors.
 
-### Framework & UI Library Tiles
+Running `tessl init` will automatically scan your dependencies and pull in any Tessl tiles that exist for them to help your agent work better with those dependencies.
 
-Search for and install tiles that match your tech stack:
+Alternatively, you can manually search for tiles:
 
 ```bash
 tessl search react          # For React components
@@ -209,23 +190,64 @@ Or ask your agent:
 Search the Tessl registry for Next.js and Recharts tiles and install them
 ```
 
-### Deployment Tiles
+### Workshop Tessl Workspace
 
-Look for tiles that can help you deploy your wrapped dashboard:
+Once you've logged in to Tessl with `tessl login`, please share your username with us in the Discord thread so we can add you to the workspace we'll use for collaborating in this workshop. You can find your username by running `tessl whoami`.
 
-```bash
-tessl search vercel         # Vercel deployment
-tessl search cloudflare     # Cloudflare Pages
+*Top tip: you can change your username from [https://tessl.io/account](https://tessl.io/account)*
+
+Once you're in, you can:
+- **Discover tiles** created by other workshop participants in real-time
+- **Publish your own tiles** to share useful patterns with others
+- **Search for tiles other attendees have published**
+
+**You'll receive a workspace invitation during the workshop setup!**
+
+### Creating and Publishing Tiles to Tessl Registry
+
+If you create something reusable during the workshop, consider publishing it as a tile:
+
+**What could make a useful Tile?:**
+- Coding guidelines (how to structure tests, how to organise files)
+- Agent style choices (always ask me for confirmation, talk like a pirate)
+- Styling systems (color schemes, typography patterns)
+- Security patterns (data sanitization, gitignore templates)
+- Reusable UI patterns (carousel layouts, card designs, etc.)
+
+**How to publish:**
+1. Ensure you have been invited into the workshop workspace
+2. Create a directory with one or more markdown files to describe your instructions to the agent
+3. In this directory, also create `tile.json` with the below format
+4. Run `tessl publish path/to/tile/directory` to publish your tile to the workshop's workspace to share with other workshop attendees
+
+Example `tile.json`:
+
+```json
+{
+  "name": "aindworkshop/<tile-name>-<user-name>", // give your tile a unique name appended with your name
+  "version": "0.1.0", // you can increment this to publish new updates
+  "summary": "<brief-description>", // e.g. ""A colorful logging formatter for pretty terminal output."
+  "steering": { // map of instructions for the agent for your tile
+    "instruction-name": {"rules": "instruction-file.md"},
+  },
+  "private": true
+}
 ```
 
-### Mobile & UI Pattern Tiles
+Once published, other workshop attendeed will be able to search for it and install it: `tessl search wrapped-carousel`.
+
+**Naming convention:** Use your name or GitHub username as a suffix to avoid collisions (e.g., `wrapped-vaporwave-theme-alan`)
+
+### Ideas for Tiles you could publish
+
+#### Mobile & UI Pattern Tiles
 
 For specific UI patterns, search for:
 - Carousel/swiper libraries for that mobile "swipe through your year" feel
 - Animation libraries for smooth transitions
 - Mobile-first responsive design patterns
 
-### Fun & Creative Styling Ideas
+#### Fun & Creative Styling Ideas
 
 Get creative with your dashboard! Try prompting your agent with style suggestions, and look for relevant tiles:
 
@@ -250,33 +272,6 @@ Get creative with your dashboard! Try prompting your agent with style suggestion
 - "Present data in infographic style"
 - "Make charts look hand-drawn/sketchy"
 - "Use a minimalist data-ink ratio approach"
-
-### Workshop Tessl Workspace
-
-During this workshop, **you'll be invited to join a shared Tessl workspace** where you can:
-- **Discover tiles** created by other workshop participants in real-time
-- **Publish your own tiles** to share useful patterns with others
-- **Search workshop-specific tiles** for things like "wrapped dashboard carousel" or "year-in-review card layout"
-
-**You'll receive a workspace invitation during the workshop setup!**
-
-### Creating and Publishing Tiles to Tessl Registry
-
-If you create something reusable during the workshop, consider publishing it as a tile:
-
-**What makes a good tile:**
-- Reusable UI patterns (carousel layouts, card designs, etc.)
-- Data parsing utilities (CSV to JSON converters, etc.)
-- Styling systems (color schemes, typography patterns)
-- Security patterns (data sanitization, gitignore templates)
-
-**How to publish:**
-1. Build your reusable component/pattern
-2. Document it clearly
-3. Publish to the workshop workspace with a unique name (e.g., `wrapped-carousel-yourname`)
-4. Others can then search and install it: `tessl search wrapped-carousel`
-
-**Naming convention:** Use your name or GitHub username as a suffix to avoid collisions (e.g., `wrapped-vaporwave-theme-alan`)
 
 ### Security Reminders
 
