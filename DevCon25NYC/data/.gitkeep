@@ -1,0 +1,28 @@
+# Data folder
+
+**⚠️ IMPORTANT: Put all your personal data files here!**
+
+This folder is in `.gitignore` to prevent accidentally committing personal data to GitHub.
+
+Supported file types (all ignored by git):
+- CSV files (`.csv`)
+- JSON files (`.json` - except package.json, tsconfig.json, etc.)
+- MBOX files (`.mbox`)
+- Text files with data (`.txt`)
+- Excel files (`.xlsx`)
+- Any other data files
+
+## Usage
+
+```bash
+# Download your data and put it here
+cp ~/Downloads/my-bank-transactions.csv data/
+cp ~/Downloads/spotify-history.json data/
+
+# Your agent can then reference them
+# "Load the CSV file from the data/ folder and analyze it"
+```
+
+## Security Note
+
+The `.gitignore` file is configured to never commit files from this folder (except this .gitkeep file). However, always double-check with `git status` before committing to ensure no personal data is staged.

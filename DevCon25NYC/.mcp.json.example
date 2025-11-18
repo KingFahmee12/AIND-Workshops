@@ -1,0 +1,37 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [ "@playwright/mcp@latest" ]
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [ "@modelcontextprotocol/server-sequential-thinking" ]
+    },
+    "memory": {
+      "command": "npx",
+      "args": [ "@modelcontextprotocol/server-memory" ]
+    },
+      "github": {
+      "command": "npx",
+      "args": [ "@modelcontextprotocol/server-github" ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+      }
+    },
+    "task-master-ai": {
+      "command": "npx",
+      "args": ["task-master-ai"],
+      "env": {
+        "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY}",
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}",
+        "GOOGLE_API_KEY": "${GOOGLE_API_KEY}",
+        "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}"
+      }
+    },
+    "backlog": {
+      "command": "backlog",
+      "args": ["mcp", "start"]
+    }
+  }
+}
